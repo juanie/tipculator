@@ -1,0 +1,11 @@
+Input: <input type="text" id="input" /><br />
+Percent: <input type="text" id="percent" value="50" />%<br />
+Output: <input type="text" id="output" />
+<script>
+  function calc() {
+    var i = document.getElementById("input").value;
+    var p = document.getElementById("percent").value;
+    var o = (i / 100) * p;
+    document.getElementById("output").value = o;
+  }
+</script>

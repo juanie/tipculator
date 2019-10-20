@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>tip calculator</title>
+  </head>
+  <body>
+    <h1>Tip Calculator</h1>
+
+    <h3>bill Amount</h3>
+
+    <form name="myForm">
+      <div class="bill">
+        <input
+          type="number"
+          placeholder="Bill Total"
+          name="billTotal"
+          id="billTot"
+        />
+      </div>
+
+      <h3>Tip percentage</h3>
+      <input
+        type="number"
+        id="tipPer"
+        placeholder="Tip percentage"
+        min="1"
+        max="100"
+      />
+
+      <input
+        type="number"
+        placeholder="split"
+        name="split"
+        id="split"
+        min="1"
+        max="100"
+      />
+
+      <h3>Total to Pay</h3>
+      <input type="number" id="totalToPay" placeholder="total to pay" />
+
+      <h3>Number of People:</h3>
+      <input type="number" id="numberOfPeople" placeholder="Number of people" />
+
+      <h3>Total per Person:</h3>
+      <input type="number" id="totalPerPerson" placeholder="total per Person" />
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

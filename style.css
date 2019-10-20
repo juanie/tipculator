@@ -1,0 +1,14 @@
+div.text {
+  position: relative;
+}
+
+div.text input {
+  padding-left: 15px;
+}
+
+div.text:after {
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  content: "$";
+}

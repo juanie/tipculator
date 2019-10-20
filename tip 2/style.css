@@ -1,0 +1,49 @@
+body {
+  background-color: #500000;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+  margin-top: -16px;
+}
+
+#form {
+  margin-top: 25px;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin: 30px auto;
+  background: maroon;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  font-size: 17px;
+  color: white;
+}
+
+button:hover {
+  background-color: black;
+  transition: background-color 1s ease-out;
+}
+
+.container {
+  background-color: white;
+  border-radius: 25px;
+  height: 450px;
+  width: 24%;
+  margin-left: 37%;
+  position: relative;
+  padding-top: 1em;
+  margin-top: 15em;
+}
