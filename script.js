@@ -7,9 +7,9 @@ function calculateTip() {
 
     var servicequality = document.getElementById("servicequality").value;
     var billsplit = document.getElementById("billsplit").value;
-    var tipTotal = document.getElementById("tipTotal").value;
-    var result = document.getElementById("result").value;
-    var billTotal = document.getElementById("billTotal").value;
+    // var tipTotal = document.getElementById("tipTotal").value;
+    // var result = document.getElementById("result").value;
+    // var billTotal = document.getElementById("billTotal").value;
 
     //Tip Calculation
 
