@@ -91,10 +91,12 @@ h2 {
     border-top-left-radius: 20px;
 
     border-top-right-radius: 20px;
+    text-align: center;
 }
 
 h3 {
     margin: 0;
+    text-align: center;
 }
 #quantitydropdownid {
     width: 200px;

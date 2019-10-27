@@ -1,8 +1,6 @@
 //Calculate Tip
 
 function calculateTip() {
-    //getElementById() method returns the element value with specified ID
-
     var billAmt = document.getElementById("billAmt").value;
     var servicequality = document.getElementById("servicequality").value;
     var billsplit = document.getElementById("billsplit").value;
@@ -24,11 +22,13 @@ function calculateTip() {
     document.getElementById("billTotal").innerHTML = Total;
 
     //calculate tip per person
+
     var resulted = (billAmt * servicequality) / billsplit;
     document.getElementById("result").innerHTML = resulted;
     resulted = resulted.toFixed(2);
-    //total bill
-    var completeTotal = billTotal + Total;
+
+    //total  amount per person
+    var completeTotal = Total / billsplit;
     document.getElementById("completeTotal").innerHTML = completeTotal;
     completeTotal = completeTotal.toFixed(2);
 }
