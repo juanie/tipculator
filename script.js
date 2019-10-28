@@ -3,27 +3,35 @@
 function calculateTip() {
     var billAmt = document.getElementById("billAmt").value;
 
-    var servicequality = document.getElementById("servicequality").value;
+    var serviceQualityForTip = document.getElementById("serviceQualityForTip")
+        .value;
     var billsplit = document.getElementById("billsplit").value;
-    // var tipTotal = document.getElementById("tipTotal").value;
-    // var result = document.getElementById("result").value;
-    // var billTotal = document.getElementById("billTotal").value;
 
     //Tip Calculation
 
-    var total = billAmt * servicequality; //For Tip Calculation
-    var Total = parseFloat(billAmt) + parseFloat(total); //For Total bill amount calculation
-    //Display  Tip
+    var totalTipCal = billAmt * serviceQualityForTip; //For Tip Calculation
+    var Total =
+        parseFloat(Math.round(billAmt)) + parseFloat(Math.round(totalTipCal));
+    // var Total = parseFloat(billAmt) + parseFloat(totalTipCal); //For Total bill amount calculation
+    //Display  Tip
 
-    document.getElementById("tipTotal").innerHTML = total;
+    document.getElementById("tipTotal").innerHTML = totalTipCal;
 
     //Display Total
-
     document.getElementById("billTotal").innerHTML = Total;
 
-    //calculate price per person
-    var resulted = (billAmt * servicequality) / billsplit;
-    document.getElementById("result").innerHTML = resulted;
+    //calculate tip per person
+
+    var tipAmtPerPerson = (billAmt * serviceQualityForTip) / billsplit;
+    document.getElementById("TipAmtPerPerson").innerHTML = tipAmtPerPerson;
+    tipAmtPerPerson = tipAmtPerPerson.toFixed(2);
+
+    //total  amount per person
+    var completeTotalAmtWithTip = Total / billsplit;
+    document.getElementById(
+        "completeTotalAmtWithTip"
+    ).innerHTML = completeTotalAmtWithTip;
+    completeTotalAmtWithTip = completeTotalAmtWithTip.toFixed(2);
 }
 
 //Click to call function
