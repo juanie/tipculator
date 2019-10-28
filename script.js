@@ -10,28 +10,25 @@ function calculateTip() {
     //Tip Calculation
 
     var totalTipCal = billAmt * serviceQualityForTip; //For Tip Calculation
-    var Total =
-        parseFloat(Math.round(billAmt)) + parseFloat(Math.round(totalTipCal));
-    // var Total = parseFloat(billAmt) + parseFloat(totalTipCal); //For Total bill amount calculation
+    var Total = parseFloat(billAmt) + parseFloat(totalTipCal); //For Total bill amount calculation
+
     //Display  Tip
-
-    document.getElementById("tipTotal").innerHTML = totalTipCal;
-
-    //Display Total
-    document.getElementById("billTotal").innerHTML = Total;
+    document.getElementById("tipTotal").innerHTML = totalTipCal.toFixed(2);
+    //Display bill total
+    document.getElementById("billTotal").innerHTML = Total.toFixed(2);
 
     //calculate tip per person
 
     var tipAmtPerPerson = (billAmt * serviceQualityForTip) / billsplit;
-    document.getElementById("TipAmtPerPerson").innerHTML = tipAmtPerPerson;
-    tipAmtPerPerson = tipAmtPerPerson.toFixed(2);
+    document.getElementById(
+        "tipAmtPerPerson"
+    ).innerHTML = tipAmtPerPerson.toFixed(2);
 
     //total  amount per person
     var completeTotalAmtWithTip = Total / billsplit;
     document.getElementById(
         "completeTotalAmtWithTip"
-    ).innerHTML = completeTotalAmtWithTip;
-    completeTotalAmtWithTip = completeTotalAmtWithTip.toFixed(2);
+    ).innerHTML = completeTotalAmtWithTip.toFixed(2);
 }
 
 //Click to call function
