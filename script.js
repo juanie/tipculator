@@ -1,38 +1,29 @@
-//Calculate Tip
+//Calculate Tip
 
 function calculateTip() {
     var billAmt = document.getElementById("billAmt").value;
 
-    var servicequality = document.getElementById("servicequality").value;
-    var billsplit = document.getElementById("billsplit").value;
-    // var tipTotal = document.getElementById("tipTotal").value;
-    // var result = document.getElementById("result").value;
-    // var billTotal = document.getElementById("billTotal").value;
+    var serviceQualityForTip = document.getElementById("serviceQualityForTip")
+        .value;
+    var billsplit = document.getElementById("billsplit").value; //Tip Calculation
 
-    //Tip Calculation
+    var totalTipCal = billAmt * serviceQualityForTip; //For Tip Calculation
+    var Total = parseFloat(billAmt) + parseFloat(totalTipCal); //For Total bill amount calculation //Display  Tip
+    document.getElementById("tipTotal").innerHTML = totalTipCal.toFixed(2); //Display bill total
+    document.getElementById("billTotal").innerHTML = Total.toFixed(2); //calculate tip per person
 
-    var total = billAmt * servicequality; //For Tip Calculation
-    var Total = parseFloat(billAmt) + parseFloat(total); //For Total bill amount calculation
-    //Display  Tip
+    var tipAmtPerPerson = (billAmt * serviceQualityForTip) / billsplit;
+    document.getElementById(
+        "tipAmtPerPerson"
+    ).innerHTML = tipAmtPerPerson.toFixed(2); //total  amount per person
 
-    document.getElementById("tipTotal").innerHTML = total;
-
-    //Display Total
-
-    document.getElementById("billTotal").innerHTML = Total;
-    //calculate tip per person
-
-    var resulted = (billAmt * servicequality) / billsplit;
-    document.getElementById("result").innerHTML = resulted;
-    resulted = resulted.toFixed(2);
-
-    //total  amount per person
-    var completeTotal = Total / billsplit;
-    document.getElementById("completeTotal").innerHTML = completeTotal;
-    completeTotal = completeTotal.toFixed(2);
+    var completeTotalAmtWithTip = Total / billsplit;
+    document.getElementById(
+        "completeTotalAmtWithTip"
+    ).innerHTML = completeTotalAmtWithTip.toFixed(2);
 }
 
-//Click to call function
+//Click to call function
 document.getElementById("calculate").onclick = function() {
     calculateTip();
 };
