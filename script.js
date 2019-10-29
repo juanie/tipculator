@@ -5,12 +5,7 @@ function calculateTip() {
 
     var serviceQualityForTip = document.getElementById("serviceQualityForTip")
         .value;
-<<<<<<< HEAD
     var billsplit = document.getElementById("billSplit").value; //Tip Calculation
-=======
-
-    var billsplit = document.getElementById("billsplit").value; //Tip Calculation
->>>>>>> 8cef53fe65fe876618f32055b1645e597261650b
 
 
     var totalTipCal = billAmt * serviceQualityForTip; //For Tip Calculation
